@@ -9,6 +9,7 @@ public abstract class SpielObjektImpl {
 	
 	public abstract void zeichneKreis(Punkt kreisMitte, int radius, Farbe farbe, boolean gefuellt);
 	public abstract void zeichneRechteck(Punkt obenLinks, int breite, int hoehe, Farbe farbe, boolean gefuellt);
-	
+	public abstract void zeichneBild(Punkt obenLinks, int breite, int hoehe, String bild);
+
 	private static SpielObjektImpl s_impl;
 }

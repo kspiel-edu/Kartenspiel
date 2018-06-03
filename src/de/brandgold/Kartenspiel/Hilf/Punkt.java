@@ -23,5 +23,16 @@ public class Punkt {
 		return Math.round(Math.sqrt(Math.pow(gibX() - p2.gibX(), 2) + Math.pow(gibY() - p2.gibY(), 2)));
 	}
 	
+	/**
+	 * Berechnet die Summe zwischen diesem und einem anderen Punkt
+	 * 
+	 * @param p2 Anderer Punkt
+	 * @return Der Abstand der beiden Punkte
+	 */
+	public Punkt summe(Punkt p2)
+	{
+		return new Punkt(m_x + p2.gibX(), m_y + p2.gibY());
+	}
+	
 	private int m_x, m_y;
 }

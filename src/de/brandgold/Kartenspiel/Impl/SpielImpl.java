@@ -9,4 +9,6 @@ public abstract class SpielImpl {
 	public abstract void ausfuehren(Spiel spiel);
 	
 	private static SpielImpl m_impl;
+
+	public abstract Spiel gibSpiel();
 }

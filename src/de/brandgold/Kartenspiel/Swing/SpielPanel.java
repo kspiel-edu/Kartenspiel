@@ -17,11 +17,11 @@ public class SpielPanel extends JPanel implements ActionListener {
 	{
 		m_spiel = spiel;
 		
-		Timer timer = new Timer(1000 / 60, this);
+		Timer timer = new Timer(1000 / 30, this);
 		timer.start();
 	}
 	
-	public void paint(Graphics g) 
+	public void paintComponent(Graphics g) 
 	{
 		g.setColor(Color.black);
 		g.fillRect(0, 0, getWidth(), getHeight());

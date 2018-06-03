@@ -2,6 +2,10 @@ package de.brandgold.Kartenspiel.Swing;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import de.brandgold.Kartenspiel.Hilf.Farbe;
 import de.brandgold.Kartenspiel.Hilf.Punkt;
@@ -42,4 +46,12 @@ public class SwingSpielObjektImpl extends SpielObjektImpl {
 	public static void setzeGraphics(Graphics graphics) { s_graphics = graphics; }
 	
 	private static Graphics s_graphics;
+
+	@Override
+	public void zeichneBild(Punkt obenLinks, int breite, int hoehe, String bild) {
+		try {
+			gibGraphics().drawImage(ImageIO.read(new File(bild)), obenLinks.gibX(), obenLinks.gibY(), breite, hoehe, null, null);
+		} catch (IOException e) {
+		}
+	}
 }

@@ -1,8 +1,14 @@
 package de.brandgold.Kartenspiel;
 
+import de.brandgold.Kartenspiel.Hilf.Punkt;
 import de.brandgold.Kartenspiel.Impl.SpielImpl;
 
 public abstract class Spiel extends SpielObjekt {
+	public Spiel() {
+		super(new Punkt(0,0));
+		// TODO Auto-generated constructor stub
+	}
+
 	public void ausfuehren()
 	{
 		SpielImpl.gib().ausfuehren(this);
@@ -17,6 +23,12 @@ public abstract class Spiel extends SpielObjekt {
 	public void beginn()
 	{
 		beiBeginn();
+	}
+	
+	public void neustart()
+	{
+		ende();
+		beginn();
 	}
 	
 	/**
